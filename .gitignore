@@ -1,4 +1,6 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 
-coding-math/_build/
+_build/
+
+.ipynb_checkpoints/
