@@ -5,3 +5,6 @@ format: jb-book
 root: intro
 chapters:
 - file: Chap1_Introduzione
+- file: Chap2_Programmare_funzioni
+- file: Chap3_Programmare_grafici
+- file: Chap4_Astrarre_tipi_di_dati
