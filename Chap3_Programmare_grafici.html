@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="4. Astrarre tipi di dati" href="Chap4_Astrarre_tipi_di_dati.html" />
@@ -335,12 +337,126 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funzioni-di-variabili-reali-a-valori-reali">
+   3.1 Funzioni di variabili reali a valori reali
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funzioni-trigonometriche">
+     3.1.1 Funzioni trigonometriche
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ricorsioni-grafiche-nel-mondo-di-escher">
+   3.2 Ricorsioni Grafiche nel mondo di Escher
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linguaggio-di-programmazione-micropython">
+     Linguaggio di Programmazione: MicroPython
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dato-primitivo-tile">
+     3.2.1 Dato primitivo: TILE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operazioni-fondamentali">
+     3.2.2 Operazioni fondamentali
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assegnamento-di-valori-a-variabili">
+     3.2.3 Assegnamento di valori a variabili
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definizione-di-nuove-funzioni">
+     3.2.4 Definizione di nuove funzioni
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definizioni-di-funzioni-ricorsive-ed-espressioni-condizionali">
+     Definizioni di funzioni ricorsive ed espressioni condizionali
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#composizione-di-funzioni">
+     3.2.4 Composizione di funzioni
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#altre-trasformazioni-di-base">
+     3.2.5 Altre trasformazioni di base
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#decomposizione-del-woodcut-di-escher">
+     3.2.6 Decomposizione del
+     <em>
+      woodcut
+     </em>
+     di Escher
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#approfondimenti">
+   Approfondimenti
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#frattali">
+   3.3 Frattali
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#esercizi">
+   3.4 Esercizi
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-della-funzione-tangente">
+     3.4.1 Plot della funzione tangente
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-di-immagini-ricorsive">
+     3.4.2 Plot di immagini ricorsive
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -352,6 +468,109 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funzioni-di-variabili-reali-a-valori-reali">
+   3.1 Funzioni di variabili reali a valori reali
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funzioni-trigonometriche">
+     3.1.1 Funzioni trigonometriche
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ricorsioni-grafiche-nel-mondo-di-escher">
+   3.2 Ricorsioni Grafiche nel mondo di Escher
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linguaggio-di-programmazione-micropython">
+     Linguaggio di Programmazione: MicroPython
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dato-primitivo-tile">
+     3.2.1 Dato primitivo: TILE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operazioni-fondamentali">
+     3.2.2 Operazioni fondamentali
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assegnamento-di-valori-a-variabili">
+     3.2.3 Assegnamento di valori a variabili
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definizione-di-nuove-funzioni">
+     3.2.4 Definizione di nuove funzioni
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definizioni-di-funzioni-ricorsive-ed-espressioni-condizionali">
+     Definizioni di funzioni ricorsive ed espressioni condizionali
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#composizione-di-funzioni">
+     3.2.4 Composizione di funzioni
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#altre-trasformazioni-di-base">
+     3.2.5 Altre trasformazioni di base
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#decomposizione-del-woodcut-di-escher">
+     3.2.6 Decomposizione del
+     <em>
+      woodcut
+     </em>
+     di Escher
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#approfondimenti">
+   Approfondimenti
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#frattali">
+   3.3 Frattali
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#esercizi">
+   3.4 Esercizi
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-della-funzione-tangente">
+     3.4.1 Plot della funzione tangente
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-di-immagini-ricorsive">
+     3.4.2 Plot di immagini ricorsive
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -361,6 +580,1190 @@ title="Print to PDF"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="programmare-grafici">
 <h1>3. Programmare grafici<a class="headerlink" href="#programmare-grafici" title="Permalink to this headline">#</a></h1>
+<p><strong>ULTIMA MODIFICA: 03.11.2022</strong></p>
+<p>In questo capitolo vedremo con in Python possiamo rappresentare dei grafici di funzioni di variabili reali a valori reali matematiche (Sezione 3.1) e di semplici funzione trigonometriche (Sezione 3.2). In seguito, vediamo come sia possbile programmare delle  funzioni per rappresentare graficamente il concetto di ricorsione visto nel capitolo precedente, arrivando a programmare il <em>Woodcut</em> di Escher.</p>
+<div class="section" id="funzioni-di-variabili-reali-a-valori-reali">
+<h2>3.1 Funzioni di variabili reali a valori reali<a class="headerlink" href="#funzioni-di-variabili-reali-a-valori-reali" title="Permalink to this headline">#</a></h2>
+<p>Vediamo ora come sia possibile riprodurre in Python i grafici seguenti, presi da un testo classico di Analisi (il Giaquinta-Modica):</p>
+<p><img alt="Fig38" src="_images/Fig38.png" /></p>
+<p>Per poter riprodurre questi plot in Python, prima cosa dobbiamo importare nel workspace le due librerie seguenti:</p>
+<ol class="simple">
+<li><p>Numerical Python: <a class="reference external" href="http://www.numpy.org/">Numpy</a></p></li>
+<li><p>Python Plotting: <a class="reference external" href="https://matplotlib.org/">Matplotlib</a></p></li>
+</ol>
+<p>In Python, per importare tutte le procedure e le funzioni di una libreria si usa il comando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="o">&lt;</span><span class="n">nome_libreria</span><span class="o">&gt;</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>In questo modo, se al posto di <code class="docutils literal notranslate"><span class="pre">nome_libreria</span></code> mettiamo per esempio <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, importeremo nel nostro workspace tutte le funzioni definite nella libreria <code class="docutils literal notranslate"><span class="pre">numpy</span></code>. Spesso, per tenere il workspace <em>pulito</em> (poche variabili, poche funzioni) si importano solo le funzioni della libreria che devono essere effettivamente usate.
+Nel nostro caso, dalle due librerie servono sono la funzione <code class="docutils literal notranslate"><span class="pre">linspace</span></code> di <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, e le procedure <code class="docutils literal notranslate"><span class="pre">plot,</span> <span class="pre">xlabel,</span> <span class="pre">ylabel,</span> <span class="pre">show</span></code> di <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importo dalla libreria solo le procedure che utilizzo</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">linspace</span>
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">plot</span><span class="p">,</span> <span class="n">xlabel</span><span class="p">,</span> <span class="n">ylabel</span><span class="p">,</span> <span class="n">show</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">who</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>linspace	 plot	 show	 xlabel	 ylabel	 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vediamo prima a cosa serve la funzione <a class="reference external" href="https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.linspace.html">linspace(a, b, n)</a>. Questa funzione serve per ottenere una sequenza di <span class="math notranslate nohighlight">\(n\)</span> numeri equidistanziati nell’intervallo <span class="math notranslate nohighlight">\([a,b]\)</span>. Per esempio:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10.])
+</pre></div>
+</div>
+</div>
+</div>
+<p>In pratica, possiamo usare la funzione <code class="docutils literal notranslate"><span class="pre">linspace</span></code> per definire il dominio di una funzione come un insieme finito di punti in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. Facendo riferimento alla Figura 3.8 riportata sopra, possiamo definire il dominio:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="c1"># print(D)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Per ogni punto del dominio <span class="math notranslate nohighlight">\(x\in D\)</span>, possiamo calcolare il valore di <span class="math notranslate nohighlight">\(y=f(x)\)</span>. Dobbiamo definire ora qual’è la funzione di cui vogliamo effettivamente visualizzare il grafico. Consideriamo prima la funzione:</p>
+<p><span class="math notranslate nohighlight">\(f(x) = x^2\)</span></p>
+<p>Che può essere implementata in modo diretto con la funzione seguente che usa l’operatore <code class="docutils literal notranslate"><span class="pre">**</span></code> per
+l’elevamento a potenza, ovvero <code class="docutils literal notranslate"><span class="pre">a**b</span></code> rappresenta <span class="math notranslate nohighlight">\(a\)</span> <em>elevato</em> <span class="math notranslate nohighlight">\(b\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Quadrato</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>ATTENZIONE</strong>: In Python, l’operatore <code class="docutils literal notranslate"><span class="pre">^</span></code> non viene usato per l’elevamento a potenza, ma indica il <a class="reference external" href="https://docs.python.org/3/reference/expressions.html">Bitwise XOR</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;power:&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bitwise xor:&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>power: 16
+bitwise xor: 6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;4 =&#39;</span><span class="p">,</span> <span class="nb">bin</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2 =&#39;</span><span class="p">,</span> <span class="nb">bin</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;4 xor 2 =&#39;</span><span class="p">,</span> <span class="nb">bin</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4 = 0b100
+2 = 0b10
+4 xor 2 = 0b110
+</pre></div>
+</div>
+</div>
+</div>
+<p>A questo punto, tornando al plot di una funzione, ci serve un modo per applicare la funzione matematica scelta ad ogni elemento del dominio. Per far questo. possiamo usare una sintassi particolare, chiamata <strong>list comprehension</strong>, definita come segue:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="n">F</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">D</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>in cui <code class="docutils literal notranslate"><span class="pre">&lt;for&gt;</span></code> e <code class="docutils literal notranslate"><span class="pre">&lt;in&gt;</span></code> sono due parole chiave di Python, mentre <code class="docutils literal notranslate"><span class="pre">&lt;F&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code>, e <code class="docutils literal notranslate"><span class="pre">&lt;Y&gt;</span></code> sono rispettivamente:</p>
+<ol class="simple">
+<li><p>(input) <code class="docutils literal notranslate"><span class="pre">F()</span></code> è una procedura che implementa una funzione <span class="math notranslate nohighlight">\(f : \mathbb{R} \rightarrow \mathbb{R}\)</span>, come ad esempio la funzione <code class="docutils literal notranslate"><span class="pre">Quadrato</span></code> definita sopra.</p></li>
+<li><p>(input) <code class="docutils literal notranslate"><span class="pre">D</span></code> è una sequenza di numeri, ottenuta per esempio con la funzione <code class="docutils literal notranslate"><span class="pre">linspace</span></code>, a cui vogliamo applicare la funzione <code class="docutils literal notranslate"><span class="pre">F()</span></code>.</p></li>
+<li><p>(output) <code class="docutils literal notranslate"><span class="pre">Y</span></code> è una sequenza di numeri, della stessa lunghezza di <code class="docutils literal notranslate"><span class="pre">D</span></code>, che contiene per ogni elemento <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">in</span> <span class="pre">D</span></code>, il corrispondente valore <code class="docutils literal notranslate"><span class="pre">F(x)</span></code>.</p></li>
+</ol>
+<p>Vediamo un esempio concreto.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">D</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1. 2. 3. 4. 5.]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="n">Quadrato</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">D</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1.0, 4.0, 9.0, 16.0, 25.0]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Come si può vedere ad ogni elemento della sequenza <code class="docutils literal notranslate"><span class="pre">D</span></code> corrisponde un valore della sequenza <code class="docutils literal notranslate"><span class="pre">Y</span></code>, che contiene il suo quadrato. Possiamo usare questi punti per interpolare un grafico di questa funzione, ma per ottenere un’interpolazione accurata, dobbiamo utilizzare un numero più elevato di elementi del dominio.</p>
+<p>Se ritorniamo all’esempio della Figura 3.8 mostrata, possiamo definire le coppie da rappresentare <span class="math notranslate nohighlight">\((x, y)\)</span>, ovvero <span class="math notranslate nohighlight">\((x, f(x))\)</span>, nel modo seguente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span> <span class="c1"># 1000 punti equi distanziati nell&#39;intervallo [-2,2]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="n">Quadrato</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">D</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">D</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">Y</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2.0 4.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vediamo ora come utilizzare questi punti per creare un grafico di <code class="docutils literal notranslate"><span class="pre">Quadrato(x)</span></code>.</p>
+<p>Per poterlo fare dobbiamo utilizzare le funzioni:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">plot(x,</span> <span class="pre">y)</span></code>: prepara il grafico per ogni coppia di punti contenuti nelle due sequenze x e y. Le due sequenze devono essere della stessa lunghezza.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xlabel</span></code> e <code class="docutils literal notranslate"><span class="pre">ylabel</span></code>: servono per definire la descrizione dell’asse delle ascisse e delle ordinate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">show</span></code>: serve per visualizzare effettivamente il grafico appena definito.</p></li>
+</ul>
+<p>Per maggiori dettagli, si veda la documentazione di <a class="reference external" href="http://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html">plot</a>, <a class="reference external" href="https://matplotlib.org/devdocs/api/_as_gen/matplotlib.pyplot.xlabel.html">xlabel</a>, <a class="reference external" href="https://matplotlib.org/devdocs/api/_as_gen/matplotlib.pyplot.ylabel.html">ylabel</a> e <a class="reference external" href="https://matplotlib.org/devdocs/api/_as_gen/matplotlib.pyplot.show.html">show</a>.</p>
+<p>Utilizzando questi comandi, possiamo rappresentare graficamente la funzione <span class="math notranslate nohighlight">\(x^2\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y=f(x)=x^2&quot;</span><span class="p">)</span>
+<span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_23_0.png" src="_images/Chap3_Programmare_grafici_23_0.png" />
+</div>
+</div>
+<p>Se invece di rappresentare la funzione <span class="math notranslate nohighlight">\(f(x)=x^2\)</span> volessimo rappresentare la funzione <span class="math notranslate nohighlight">\(f(x)=x^3\)</span>, definita nello stesso dominio, ci basta calcolare la sequenza di numeri <code class="docutils literal notranslate"><span class="pre">Y</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">D</span><span class="p">]</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y=f(x)=x^3&quot;</span><span class="p">)</span>
+<span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_25_0.png" src="_images/Chap3_Programmare_grafici_25_0.png" />
+</div>
+</div>
+<p>A volte, quello che si vuole fare in analisi per studiare una funzione è sovrapporre sullo stesso grafico funzioni tra di loro simili, ma che sono definite da valori diversi dello stesso parametro. Se consideriamo per esempio la funzione potenza <span class="math notranslate nohighlight">\(f(x)=x^n\)</span> per <span class="math notranslate nohighlight">\(x \in D\)</span>, potremmo voler dare una rappresentazione grafica delle quattro funzioni che si ottengono al variare del parametro <span class="math notranslate nohighlight">\(n \in \{1,2,3,4\}\)</span>. Questo può essere ottenuto in Python richiamando più volte la funzione <code class="docutils literal notranslate"><span class="pre">plot(x,y)</span></code>, prima di chiamare la funzione <code class="docutils literal notranslate"><span class="pre">show()</span></code>.</p>
+<p><strong>ESEMPIO:</strong> (diverse funzioni sullo stesso plot)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">D</span><span class="p">])</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">D</span><span class="p">])</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">D</span><span class="p">])</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">D</span><span class="p">])</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;f(x)&quot;</span><span class="p">)</span>
+<span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_27_0.png" src="_images/Chap3_Programmare_grafici_27_0.png" />
+</div>
+</div>
+<p>In alcuni casi, può essere utile rappresentare una funzione in scala logaritmica su entrambi gli assi, oppure, può essere utile aggiungere una legenda al grafico, per poter distinguere facilmente le diverse funzioni rappresentate. In questo caso si devono usare le procedure <code class="docutils literal notranslate"><span class="pre">xscale</span></code>, <code class="docutils literal notranslate"><span class="pre">yscale</span></code>, e <code class="docutils literal notranslate"><span class="pre">legend</span></code>, come mostrato nell’esempio seguente.</p>
+<p>Per maggiori dettagli, si veda la documentazione di  <a class="reference external" href="https://matplotlib.org/devdocs/api/_as_gen/matplotlib.pyplot.xscale.html">xscale</a>, <a class="reference external" href="https://matplotlib.org/devdocs/api/_as_gen/matplotlib.pyplot.yscale.html">yscale</a> e <a class="reference external" href="https://matplotlib.org/devdocs/api/_as_gen/matplotlib.pyplot.legend.html">legend</a>.</p>
+<p><strong>ESEMPIO:</strong> (coordinate cartesiane e legenda)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="c1"># Importo dalla libreria solo gli oggetti che mi servono veramente</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">linspace</span>
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">axvline</span><span class="p">,</span> <span class="n">plot</span><span class="p">,</span> <span class="n">xlabel</span><span class="p">,</span> <span class="n">ylabel</span><span class="p">,</span> <span class="n">show</span><span class="p">,</span> <span class="n">xscale</span><span class="p">,</span> <span class="n">yscale</span><span class="p">,</span> <span class="n">legend</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">D</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;y=x&quot;</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">D</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;y=x^2&quot;</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">D</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;y=x^3&quot;</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">D</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;y=x^4&quot;</span><span class="p">)</span>
+<span class="n">xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+<span class="n">yscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x - log scale&quot;</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y=f(x)=x^n - log scale&quot;</span><span class="p">)</span>
+<span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">shadow</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_29_0.png" src="_images/Chap3_Programmare_grafici_29_0.png" />
+</div>
+</div>
+<div class="section" id="funzioni-trigonometriche">
+<h3>3.1.1 Funzioni trigonometriche<a class="headerlink" href="#funzioni-trigonometriche" title="Permalink to this headline">#</a></h3>
+<p>Per poter rappresentare delle funzioni trigonometriche è necessario utilizzare una terza libreria di Python (abbiamo già usato <code class="docutils literal notranslate"><span class="pre">numpy</span></code> e <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>), chiamata <code class="docutils literal notranslate"><span class="pre">math</span></code>, che definisce molte costanti note (e.g. <span class="math notranslate nohighlight">\(\pi\)</span> e <span class="math notranslate nohighlight">\(e\)</span>) e la maggior parte delle funzioni di uso comune (e.g. <span class="math notranslate nohighlight">\(\sin(x)\)</span>, <span class="math notranslate nohighlight">\(\log(x)\)</span>, <span class="math notranslate nohighlight">\(e^x\)</span>, sqrt<span class="math notranslate nohighlight">\((x)=\sqrt(x)\)</span>, …). Per vedere la lista completa di funzioni implementate nella libreria <code class="docutils literal notranslate"><span class="pre">math</span></code>, consultare la <a class="reference external" href="https://docs.python.org/3/library/math.html">documentazione della libreria</a>.</p>
+<p><strong>ESEMPIO:</strong> plot della funzione <span class="math notranslate nohighlight">\(f(x)=a\,\sin(x)\)</span>, per <span class="math notranslate nohighlight">\(a=0.5,1,3\)</span>, nel dominio <span class="math notranslate nohighlight">\([0,2 \pi]\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Per prima cosa importo la funzione sin(x) e la costante pi (pi-greco)</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sin</span><span class="p">,</span> <span class="n">pi</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.141592653589793
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Poi scrivo i comandi per ottenere i grafici voluti</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.5</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">D</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;y=0.5*sin(x)&quot;</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="p">[</span><span class="mf">1.0</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">D</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;y=1.0*sin(x)&quot;</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="p">[</span><span class="mf">3.0</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">D</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;y=3.0*sin(x)&quot;</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y=f(x)=a sin(x)&quot;</span><span class="p">)</span>
+<span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper right&quot;</span><span class="p">,</span> <span class="n">shadow</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_32_0.png" src="_images/Chap3_Programmare_grafici_32_0.png" />
+</div>
+</div>
+<p><strong>ESERCIZIO 3.1:</strong> Rappresentare il grafico della funzione esponenziale <span class="math notranslate nohighlight">\(a^x\)</span>, nell’intervallo <span class="math notranslate nohighlight">\([-4,4]\)</span>, utilizzando i seguenti valori di <span class="math notranslate nohighlight">\(a\)</span>: 1.2, 1.4, 2 (sovrapporre i grafici nella stessa figura). Nota: si dovrebbe ottenere un grafico simile a quello di Figura 3.19(a) mostrata sopra.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DA COMPLETARE</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>ESERCIZIO 3.2:</strong> Rappresentare il grafico della funzione esponenziale <span class="math notranslate nohighlight">\(a^x\)</span>, nell’intervallo <span class="math notranslate nohighlight">\([-4,4]\)</span>, utilizzando i seguenti valori di <span class="math notranslate nohighlight">\(a\)</span>: 0.8, 0.7, 0.5 (sovrapporre i grafici nella stessa figura). Nota: si dovrebbe ottenere un grafico simile a quello di Figura 3.19(b) del Giaquinta-Modica.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DA COMPLETARE</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>ESERCIZIO 3.3:</strong> (<em>esercizio difficile</em>) Rappresentare il grafico della funzione tangente nell’intervallo <span class="math notranslate nohighlight">\([-4 \pi, 4 \pi]\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DA COMPLETARE</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>ESERCIZIO 3.4:</strong> Rappresentare il grafico della funzione <span class="math notranslate nohighlight">\(\sin(\frac{a}{x})\)</span>, nell’intervallo <span class="math notranslate nohighlight">\([-2 \pi, 2 \pi]\)</span>, per <span class="math notranslate nohighlight">\(a \in {1,2,3,4}\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DA COMPLETARE</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ricorsioni-grafiche-nel-mondo-di-escher">
+<h2>3.2 Ricorsioni Grafiche nel mondo di Escher<a class="headerlink" href="#ricorsioni-grafiche-nel-mondo-di-escher" title="Permalink to this headline">#</a></h2>
+<p>In questo notebook vediamo come con un linguaggio di programmazione molto semplice possiamo <strong>programmare</strong> delle funzioni ricorsive che trasformano immagini semplici in immagini articolate. L’obiettivo finale di questo notebook è di permettere allo studente di capire come scrivere un programma che produca un’immagine simile al <a class="reference external" href="https://www.wikiart.org/en/m-c-escher/square-limit">woodcut di Escher</a>, chiamato <strong>Square Limit</strong>:</p>
+<p><img alt="Escher's Fish" src="_images/fishEscher.jpg" /></p>
+<p><strong>NOTA:</strong> Per altre opere, si veda la pagina di <a class="reference external" href="https://en.wikipedia.org/wiki/M._C._Escher">M.C. Escher</a></p>
+<p><strong>RIFERIMENTI:</strong></p>
+<ol class="simple">
+<li><p>La libreria svgpath2mpl (appare nella seconda meta di questo file) è stata presa da questa repository: <a class="reference external" href="https://github.com/nvictus/svgpath2mpl">svgpath2mpl</a></p></li>
+<li><p>La classe Tile è stata ripresa e riadatta da questo sito: <a class="reference external" href="https://github.com/mapio/programming-with-escher/blob/master/notebook.ipynb">programming-with-escher</a></p></li>
+</ol>
+<div class="section" id="linguaggio-di-programmazione-micropython">
+<h3>Linguaggio di Programmazione: MicroPython<a class="headerlink" href="#linguaggio-di-programmazione-micropython" title="Permalink to this headline">#</a></h3>
+<p>Useremo un linguaggio di Programmazione che contiene solo gli elementi seguenti:</p>
+<ol class="simple">
+<li><p>L’assegnamento di valori a variabili.</p></li>
+<li><p>La definizione di funzioni semplici e ricorsive.</p></li>
+<li><p>La composizione di funzioni.</p></li>
+<li><p>Espressioni condizionali</p></li>
+</ol>
+<p>Vedremo come questi elementi di base possono essere usati per manipolare un dato <strong>primitivo</strong> di natura grafica.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Per prima cosa, con il comando seguente, importiamo </span>
+<span class="c1"># le funzioni del nostro micro-linguaggio dalla libreria &quot;escherFish&quot;:</span>
+
+<span class="kn">from</span> <span class="nn">escherFish</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">who</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>D	 EndpointArc	 Quadrato	 Tile	 Y	 above	 axvline	 beside	 blank	 
+edge	 f	 fish	 flip	 legend	 linspace	 over	 parse_path	 pi	 
+plot	 rot	 rot45	 setSize	 show	 sin	 triangle	 xlabel	 xscale	 
+ylabel	 yscale	 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dato-primitivo-tile">
+<h3>3.2.1 Dato primitivo: TILE<a class="headerlink" href="#dato-primitivo-tile" title="Permalink to this headline">#</a></h3>
+<p>Se guardiamo il <em>woodcut</em> di Escher precedente, risulta chiaro come questo sia ottenuto dalla ripetizione di uno stesso <strong>elemento base</strong> (ovvero, un pesce stilizzato), che è stato opportunamente orientato, ridimensionato, e colorato.</p>
+<p>Per poter cercar di riprodurre quel quadro “<em>programmando</em>”, abbiamo bisogno di definire un tipo di dato fondamentale, un elemento base, che viene chiamato <strong>TILE</strong>. Un <em>tile</em> rappresenta un disegno unico racchiuso in un quadrato di lato unitario. Mostriamo nel seguito, come a partire da un singolo <em>tile</em>, attraverso la composizione di una sequenza di funzioni, possiamo ottenere dei disegni più complessi.</p>
+<p>Iniziamo con un tile asimmetrico, in modo da mostrare più facilmente il tipo di trasformazioni che abbiamo a disposizione.</p>
+<p>Il primo tile che consideriamo è una rappresentazione grafica della lettera <code class="docutils literal notranslate"><span class="pre">F</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_45_0.png" src="_images/Chap3_Programmare_grafici_45_0.png" />
+</div>
+</div>
+<p>Si osservi che la parte tratteggiata non è parte del tile, ma serve per evidenziare il quadrato entro cui la tile è contenuta. Inoltre si noti come il tipo di dato “tile” è stato definito in modo che venga visualizzato nel notebook in modo automatico, senza bisogno di richiamare una funzione particolare.</p>
+</div>
+<div class="section" id="operazioni-fondamentali">
+<h3>3.2.2 Operazioni fondamentali<a class="headerlink" href="#operazioni-fondamentali" title="Permalink to this headline">#</a></h3>
+<p>Vediamo ora due semplici funzioni che possiamo applicare ad un tile: possiamo ruotare in senso antiorario di <span class="math notranslate nohighlight">\(90^o\)</span> un tile, oppure possiamo “ribaltare” (in inglese, <em>flip</em>) un tile rispetto al suo asso verticale che passa per il centro del quadrato. Per esempio, possiamo applicare al tile <code class="docutils literal notranslate"><span class="pre">f</span></code> le due funzioni:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rot</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_48_0.png" src="_images/Chap3_Programmare_grafici_48_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_49_0.png" src="_images/Chap3_Programmare_grafici_49_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">flip</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_50_0.png" src="_images/Chap3_Programmare_grafici_50_0.png" />
+</div>
+</div>
+<p>Si noti come la sintassi usata sia la stessa che abbiamo visto per la definizione di funzioni numeriche, come <code class="docutils literal notranslate"><span class="pre">sqrt(x)</span></code>, <code class="docutils literal notranslate"><span class="pre">sin(x)</span></code>, <code class="docutils literal notranslate"><span class="pre">cos(x)</span></code> o <code class="docutils literal notranslate"><span class="pre">log(x)</span></code>. L’unica differenza è che stiamo usando un dato primitivo di tipo grafico invece che di tipo numerico. Ovvero stiamo utilizzando delle funzioni:</p>
+<div class="math notranslate nohighlight">
+\[f : X \rightarrow Y\]</div>
+<p>dove <span class="math notranslate nohighlight">\(X\)</span> e <span class="math notranslate nohighlight">\(Y\)</span> sono l’insieme delle possibili tiles (mentre, ad esempio, per le funzioni trigonometriche <span class="math notranslate nohighlight">\(X\)</span> e <span class="math notranslate nohighlight">\(Y\)</span> sono sottoinsiemi di <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>).
+Come si possono <em>comporre</em> semplici operazioni aritmetiche (e.g., <code class="docutils literal notranslate"><span class="pre">sin(cos(x))</span></code>), anche per i tile, possiamo comporre più funzioni applicandone una dopo l’altra:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">flip</span><span class="p">(</span><span class="n">rot</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_52_0.png" src="_images/Chap3_Programmare_grafici_52_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rot</span><span class="p">(</span><span class="n">flip</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_53_0.png" src="_images/Chap3_Programmare_grafici_53_0.png" />
+</div>
+</div>
+<p>Chiaramente, l’ordine con cui vengono applicate le diverse funzioni può portare a degli oggetti grafici (tiles) diversi.</p>
+</div>
+<div class="section" id="assegnamento-di-valori-a-variabili">
+<h3>3.2.3 Assegnamento di valori a variabili<a class="headerlink" href="#assegnamento-di-valori-a-variabili" title="Permalink to this headline">#</a></h3>
+<p>Abbiamo detto sopra che nel nostro linguaggio possiamo introdurre delle nuove <strong>variabili</strong> che “memorizzano” un valore (un tile) modificato da una funzione:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fr</span> <span class="o">=</span> <span class="n">rot</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>in questo caso, l’effetto dell’operatore di assegnamento (il simbolo dell’uguale <code class="docutils literal notranslate"><span class="pre">=</span></code>) è di assegnare alla variabile <code class="docutils literal notranslate"><span class="pre">fr</span></code> il valore di <code class="docutils literal notranslate"><span class="pre">f</span></code> ruotato di <span class="math notranslate nohighlight">\(90^o\)</span> in senso antiorario. Se vogliamo vedere il valore della variabile <code class="docutils literal notranslate"><span class="pre">fr</span></code>, basta digitare:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_58_0.png" src="_images/Chap3_Programmare_grafici_58_0.png" />
+</div>
+</div>
+<p><strong>DOMANDA 1:</strong> Non sarebbe comodo avere una funzione primitiva per ruotare un tile di <span class="math notranslate nohighlight">\(90^o\)</span> in senso orario?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rotOrario</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">rot</span><span class="p">(</span><span class="n">rot</span><span class="p">(</span><span class="n">rot</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rotOrario</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_61_0.png" src="_images/Chap3_Programmare_grafici_61_0.png" />
+</div>
+</div>
+<p>Oltre a funzioni <em>unarie</em>, ovvero che prendono in input un solo argomento, possiamo definire delle operazioni fondamentali <em>binarie</em>, che prendono in input due tile e li combinano per produrre un nuovo tile:</p>
+<div class="math notranslate nohighlight">
+\[f : X \times X \rightarrow X\]</div>
+<p>Le operazioni fondamentali che introduciamo nel nostro linguaggio sono: <code class="docutils literal notranslate"><span class="pre">above(x,</span> <span class="pre">y)</span></code>, <code class="docutils literal notranslate"><span class="pre">beside(x,</span> <span class="pre">y)</span></code>, e <code class="docutils literal notranslate"><span class="pre">over(x,</span> <span class="pre">y)</span></code>. Le prime due operazioni affiancano le due tile <code class="docutils literal notranslate"><span class="pre">x</span></code> e <code class="docutils literal notranslate"><span class="pre">y</span></code> una sopra l’altra, riscalandole in modo che il risultato sia ancora una tile contenuta nel quadrato unitario. La terza operazione, <code class="docutils literal notranslate"><span class="pre">over</span></code>, sovrappone semplicemente le due tile.</p>
+<p>beside(f,f)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">above</span><span class="p">(</span><span class="n">flip</span><span class="p">(</span><span class="n">f</span><span class="p">),</span> <span class="n">rot</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_64_0.png" src="_images/Chap3_Programmare_grafici_64_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">over</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">flip</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_65_0.png" src="_images/Chap3_Programmare_grafici_65_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">over</span><span class="p">(</span><span class="n">flip</span><span class="p">(</span><span class="n">f</span><span class="p">),</span> <span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_66_0.png" src="_images/Chap3_Programmare_grafici_66_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="definizione-di-nuove-funzioni">
+<h3>3.2.4 Definizione di nuove funzioni<a class="headerlink" href="#definizione-di-nuove-funzioni" title="Permalink to this headline">#</a></h3>
+<p>In un linguaggio di programmazione è possibile  definire nuovi funzioni che a partire dall’insieme di funzioni “primitive” del linguaggio. In questa lezione siamo interessati a definire delle funzioni che operano sui tiles, prendendo in input uno o più tile, e restituiscono in output un nuovo tile.</p>
+<p>La <strong>sintassi</strong> del linguaggio per definire nuove funzioni è la seguente:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="o">&lt;</span><span class="n">nomefunzione</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&lt;</span><span class="n">lista</span> <span class="n">di</span> <span class="n">variabili</span> <span class="n">di</span> <span class="nb">input</span><span class="o">&gt;</span><span class="p">):</span>
+    <span class="c1"># insieme di operazioni e applicazioni di funzioni</span>
+    <span class="k">return</span> <span class="o">&lt;</span><span class="n">valore</span> <span class="n">finale</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Le parole chiave del linguaggio sono <strong><code class="docutils literal notranslate"><span class="pre">def</span></code></strong> e <strong><code class="docutils literal notranslate"><span class="pre">return</span></code></strong>; i due punti <strong><code class="docutils literal notranslate"><span class="pre">:</span></code></strong> e la tabulazione dopo la parola <strong><code class="docutils literal notranslate"><span class="pre">def</span></code></strong> è importante; <code class="docutils literal notranslate"><span class="pre">&lt;nomefunzione&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;lista</span> <span class="pre">di</span> <span class="pre">variabili</span> <span class="pre">di</span> <span class="pre">input&gt;</span></code>, e <code class="docutils literal notranslate"><span class="pre">&lt;valore</span> <span class="pre">finale&gt;</span></code> siete voi a doverli definire.</p>
+<p>Vediamo ora un esempio:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">quartet</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">above</span><span class="p">(</span><span class="n">beside</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">),</span> <span class="n">beside</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">s</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Si noti come le parole chiave del linguaggio sono colorate in verde e il nome della funzione <code class="docutils literal notranslate"><span class="pre">quartet</span></code> (scelto da voi) sia in blue. La funzione prende in input quattro variabili, chiamate semplicemente <code class="docutils literal notranslate"><span class="pre">p</span></code>,<code class="docutils literal notranslate"><span class="pre">q</span></code>,<code class="docutils literal notranslate"><span class="pre">r</span></code>, e <code class="docutils literal notranslate"><span class="pre">s</span></code>, e produce in output un tile che risulta da mettere l’immagine ottenuta affiancando <code class="docutils literal notranslate"><span class="pre">p</span></code> e <code class="docutils literal notranslate"><span class="pre">q</span></code>, sopra l’immagine ottenuta affiancando <code class="docutils literal notranslate"><span class="pre">r</span></code> e <code class="docutils literal notranslate"><span class="pre">s</span></code> (notare che è quasi più semplice leggere il codice che non la sua descrizione testuale…).</p>
+<p>Una volta definita la funzione <code class="docutils literal notranslate"><span class="pre">quartet</span></code> può essere utilizzata nel modo seguente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quartet</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">flip</span><span class="p">(</span><span class="n">f</span><span class="p">),</span> <span class="n">flip</span><span class="p">(</span><span class="n">rot</span><span class="p">(</span><span class="n">rot</span><span class="p">(</span><span class="n">f</span><span class="p">))),</span> <span class="n">rot</span><span class="p">(</span><span class="n">rot</span><span class="p">(</span><span class="n">f</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_70_0.png" src="_images/Chap3_Programmare_grafici_70_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">qf</span> <span class="o">=</span> <span class="n">quartet</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">flip</span><span class="p">(</span><span class="n">f</span><span class="p">),</span> <span class="n">flip</span><span class="p">(</span><span class="n">rot</span><span class="p">(</span><span class="n">rot</span><span class="p">(</span><span class="n">f</span><span class="p">))),</span> <span class="n">rot</span><span class="p">(</span><span class="n">rot</span><span class="p">(</span><span class="n">f</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q2</span> <span class="o">=</span> <span class="n">quartet</span><span class="p">(</span><span class="n">qf</span><span class="p">,</span> <span class="n">qf</span><span class="p">,</span> <span class="n">qf</span><span class="p">,</span> <span class="n">qf</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_73_0.png" src="_images/Chap3_Programmare_grafici_73_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quartet</span><span class="p">(</span><span class="n">q2</span><span class="p">,</span> <span class="n">q2</span><span class="p">,</span> <span class="n">q2</span><span class="p">,</span> <span class="n">q2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_74_0.png" src="_images/Chap3_Programmare_grafici_74_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="definizioni-di-funzioni-ricorsive-ed-espressioni-condizionali">
+<h3>Definizioni di funzioni ricorsive ed espressioni condizionali<a class="headerlink" href="#definizioni-di-funzioni-ricorsive-ed-espressioni-condizionali" title="Permalink to this headline">#</a></h3>
+<p>A questo punto possiamo introdurre delle funzioni <strong>ricorsive</strong> che costruiscono delle nuove tile che sono “auto simili”.
+Un semplice esempio di funzione ricorsiva è la seguente</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">F</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">a</span>
+    <span class="k">return</span> <span class="n">F</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Abbiamo introdotto la nuova parola chiave <code class="docutils literal notranslate"><span class="pre">if</span></code> che serve per valutare una <strong>espressione condizionale</strong>: in questo caso si controlla che il valore della variabile di input chiamata <code class="docutils literal notranslate"><span class="pre">b</span></code> sia uguale a zero; se l’espressione viene verificata, allora viene restituito il valore di <code class="docutils literal notranslate"><span class="pre">a</span></code>. Altrimenti viene restituito il valore ottenuto richiamando la stessa funzione, ma con due nuove variabili di input di valore <code class="docutils literal notranslate"><span class="pre">a+1</span></code> e <code class="docutils literal notranslate"><span class="pre">b-1</span></code>.</p>
+<p><strong>DOMANDA 2:</strong> Qual’è il risultato di questa “chiamata” alla funzione <code class="docutils literal notranslate"><span class="pre">F</span></code>?</p>
+<p><code class="docutils literal notranslate"><span class="pre">F(13,9)</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Provare a richiamare la funzione F(13,9)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>IMPORTANTE</strong>: La funzione <code class="docutils literal notranslate"><span class="pre">F(a,</span> <span class="pre">b)</span></code> è detta ricorsiva perché è definita in termini di se stessa.</p>
+</div>
+<div class="section" id="composizione-di-funzioni">
+<h3>3.2.4 Composizione di funzioni<a class="headerlink" href="#composizione-di-funzioni" title="Permalink to this headline">#</a></h3>
+<p>Vediamo cosa possiamo comporre funzioni ricorsive per le immagini.
+Consideriamo prima due nuovi tipi di tile:</p>
+<ol class="simple">
+<li><p>un triangolo</p></li>
+<li><p>un tile vuoto, chiamato <code class="docutils literal notranslate"><span class="pre">blank</span></code></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">triangle</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_81_0.png" src="_images/Chap3_Programmare_grafici_81_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rot</span><span class="p">(</span><span class="n">triangle</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_82_0.png" src="_images/Chap3_Programmare_grafici_82_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">blank</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_83_0.png" src="_images/Chap3_Programmare_grafici_83_0.png" />
+</div>
+</div>
+<p>Usando questi due tile, possiamo costruire un nuovo “quartetto” chiamato <code class="docutils literal notranslate"><span class="pre">rectric</span></code>, in cui il quadrato in alto a sinistra è un triangolo ruotato, mentre gli altri tre sono dei tile definiti in modo uguale. Ovvero possiamo definire la funzione ricorsiva:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rectric</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">blank</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">quartet</span><span class="p">(</span><span class="n">rot</span><span class="p">(</span><span class="n">triangle</span><span class="p">),</span> <span class="n">rectric</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">rectric</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">rectric</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Richiamando la funzione appena definita con diversi valori di <span class="math notranslate nohighlight">\(n\)</span> dovremmo capire facilmente il processo di calcolo sviluppato da questa funzione ricorsiva.</p>
+<p><strong>DOMANDA 3</strong>: Cosa vi aspettate come risultato della chiamata alla funzione <code class="docutils literal notranslate"><span class="pre">rectric(1)</span></code>?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rectric</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_87_0.png" src="_images/Chap3_Programmare_grafici_87_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rectric</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_88_0.png" src="_images/Chap3_Programmare_grafici_88_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rectric</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_89_0.png" src="_images/Chap3_Programmare_grafici_89_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rectric</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_90_0.png" src="_images/Chap3_Programmare_grafici_90_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="altre-trasformazioni-di-base">
+<h3>3.2.5 Altre trasformazioni di base<a class="headerlink" href="#altre-trasformazioni-di-base" title="Permalink to this headline">#</a></h3>
+<p>Cosa potremmo fare se invece di un “quartetto” volessimo ottenere la combinazione di nove tile in una griglia 3 per 3? L’operazione <code class="docutils literal notranslate"><span class="pre">beside</span></code> che abbiamo introdotto prima, partiziona lo spazio verticale in due parti uguali. Quindi non possiamo usarla per definire una griglia 3 per 3 senza prima aggiungere la possibilità di definire quanto spazio lasciare per il primo tile e quanto per il secondo.</p>
+<p>In pratica, vogliamo poter passare come argomento alla funzione <code class="docutils literal notranslate"><span class="pre">beside</span></code> la frazione di spazio occupata dal primo tile e la frazione usata dal secondo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">beside</span><span class="p">(</span><span class="n">flip</span><span class="p">(</span><span class="n">f</span><span class="p">),</span> <span class="n">f</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_92_0.png" src="_images/Chap3_Programmare_grafici_92_0.png" />
+</div>
+</div>
+<p>In pratica, abbiamo introdotto la funzione <code class="docutils literal notranslate"><span class="pre">beside(x,</span> <span class="pre">y,</span> <span class="pre">a,</span> <span class="pre">b)</span></code>, che prende in input quattro parametri. I due nuovi parametri <code class="docutils literal notranslate"><span class="pre">a</span></code> e <code class="docutils literal notranslate"><span class="pre">b</span></code> servono per stabilire quanto spazio lasciare al primo tile a quanto al secondo.</p>
+<p>Nella chiamata precedente, il primo tile ha occupato i 2/5 dello spazio orizzontale disponibile (ovvero <span class="math notranslate nohighlight">\(\frac{a}{a+b}\)</span>), mentre la seconda tile ha occupato i 3/5 (ovvero <span class="math notranslate nohighlight">\(\frac{a}{a+b}\)</span>).</p>
+<p>In modo analogo, anche la funzione <code class="docutils literal notranslate"><span class="pre">above</span></code> può prendere quattro parametri: <code class="docutils literal notranslate"><span class="pre">above(x,</span> <span class="pre">y,</span> <span class="pre">a,</span> <span class="pre">b)</span></code>, in cui i parametri <code class="docutils literal notranslate"><span class="pre">a</span></code> e <code class="docutils literal notranslate"><span class="pre">b</span></code> hanno lo stesso significato della funzione precedente.</p>
+<p>Usando queste definizioni, a questo punto possiamo definire la funzione <code class="docutils literal notranslate"><span class="pre">nonet</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nonet</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">above</span><span class="p">(</span>
+            <span class="n">beside</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">beside</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">r</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+            <span class="n">above</span><span class="p">(</span>
+                <span class="n">beside</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">beside</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">u</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+                <span class="n">beside</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">beside</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="p">),</span>
+            <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nonet</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">blank</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_95_0.png" src="_images/Chap3_Programmare_grafici_95_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="decomposizione-del-woodcut-di-escher">
+<h3>3.2.6 Decomposizione del <em>woodcut</em> di Escher<a class="headerlink" href="#decomposizione-del-woodcut-di-escher" title="Permalink to this headline">#</a></h3>
+<p>Veniamo ora al quadro da cui siamo partiti in questo notebook.</p>
+<p>Il tile fondamentale del quadro di Escher è il seguente “pesce”:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fish</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_97_0.png" src="_images/Chap3_Programmare_grafici_97_0.png" />
+</div>
+</div>
+<p>Anche se non è completamente contenuto in un quadrato unitario, fu scelto da Escher in quanto è una forma in grado di “combaciare” con una sua stessa rotazione:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">over</span><span class="p">(</span><span class="n">fish</span><span class="p">,</span> <span class="n">rot</span><span class="p">(</span><span class="n">rot</span><span class="p">(</span><span class="n">fish</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_99_0.png" src="_images/Chap3_Programmare_grafici_99_0.png" />
+</div>
+</div>
+<p>Questa immagine ha anche altre proprietà “<em>magiche</em>”. Prima però, aggiungiamo un’altra operazione di base al nostro linguaggio grafico: definiamo una trasformazione, chiamata <code class="docutils literal notranslate"><span class="pre">rot45()</span></code> che ruota un tile di <span class="math notranslate nohighlight">\(45^o\)</span> in senso antiorario e la ridimensiona di una fattore <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>. Vediamo cosa esegue questa trasformazione usando un triangolo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rot45</span><span class="p">(</span><span class="n">triangle</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_101_0.png" src="_images/Chap3_Programmare_grafici_101_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">triangle</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_102_0.png" src="_images/Chap3_Programmare_grafici_102_0.png" />
+</div>
+</div>
+<p>Il pesce è cosi “<em>magico</em>” perché se prendiamo questa nuova trasformazione e la tile che produce, possiamo comporre diverse operazioni per ottenere le tile seguenti:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">smallfish</span> <span class="o">=</span> <span class="n">flip</span><span class="p">(</span><span class="n">rot45</span><span class="p">(</span><span class="n">fish</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">smallfish</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_105_0.png" src="_images/Chap3_Programmare_grafici_105_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">over</span><span class="p">(</span><span class="n">fish</span><span class="p">,</span> <span class="n">over</span><span class="p">(</span><span class="n">smallfish</span><span class="p">,</span> <span class="n">rot</span><span class="p">(</span><span class="n">rot</span><span class="p">(</span><span class="n">rot</span><span class="p">(</span><span class="n">smallfish</span><span class="p">)))))</span>
+<span class="n">t</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_106_0.png" src="_images/Chap3_Programmare_grafici_106_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="n">over</span><span class="p">(</span><span class="n">over</span><span class="p">(</span><span class="n">over</span><span class="p">(</span><span class="n">smallfish</span><span class="p">,</span> <span class="n">rot</span><span class="p">(</span><span class="n">smallfish</span><span class="p">)),</span> <span class="n">rot</span><span class="p">(</span><span class="n">rot</span><span class="p">(</span><span class="n">smallfish</span><span class="p">))),</span> <span class="n">rot</span><span class="p">(</span><span class="n">rot</span><span class="p">(</span><span class="n">rot</span><span class="p">(</span><span class="n">smallfish</span><span class="p">))))</span>
+<span class="n">u</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_107_0.png" src="_images/Chap3_Programmare_grafici_107_0.png" />
+</div>
+</div>
+<p>Si osservi che le due tile <code class="docutils literal notranslate"><span class="pre">t</span></code> e <code class="docutils literal notranslate"><span class="pre">u</span></code> appena definite solo i blocchi base del quadro:</p>
+<p><img alt="Escher's Fish" src="fishEscher.jpg" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_109_0.png" src="_images/Chap3_Programmare_grafici_109_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_110_0.png" src="_images/Chap3_Programmare_grafici_110_0.png" />
+</div>
+</div>
+<p>Questi due blocchi base vengono utilizzati per definire due funzioni ricorsive:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">side</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> 
+        <span class="k">return</span> <span class="n">blank</span>
+    <span class="k">else</span><span class="p">:</span> 
+        <span class="k">return</span> <span class="n">quartet</span><span class="p">(</span><span class="n">side</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">side</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">rot</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">corner</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">blank</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">quartet</span><span class="p">(</span><span class="n">corner</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">side</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">rot</span><span class="p">(</span><span class="n">side</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)),</span> <span class="n">u</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vediamo ora cosa fanno in pratica queste due funzioni.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">side</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_115_0.png" src="_images/Chap3_Programmare_grafici_115_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">side</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_116_0.png" src="_images/Chap3_Programmare_grafici_116_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">side</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_117_0.png" src="_images/Chap3_Programmare_grafici_117_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">corner</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_118_0.png" src="_images/Chap3_Programmare_grafici_118_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">corner</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_119_0.png" src="_images/Chap3_Programmare_grafici_119_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">corner</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_120_0.png" src="_images/Chap3_Programmare_grafici_120_0.png" />
+</div>
+</div>
+<p>A questo punto abbiamo tutti gli elementi per arrivare a definire un’immagine grafica di un certo effetto, componendo tutte le varie operazioni introdotte:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">squarelimit</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">nonet</span><span class="p">(</span>
+        <span class="n">corner</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> 
+        <span class="n">side</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> 
+        <span class="n">rot</span><span class="p">(</span><span class="n">rot</span><span class="p">(</span><span class="n">rot</span><span class="p">(</span><span class="n">corner</span><span class="p">(</span><span class="n">n</span><span class="p">)))),</span> 
+        <span class="n">rot</span><span class="p">(</span><span class="n">side</span><span class="p">(</span><span class="n">n</span><span class="p">)),</span> 
+        <span class="n">u</span><span class="p">,</span> 
+        <span class="n">rot</span><span class="p">(</span><span class="n">rot</span><span class="p">(</span><span class="n">rot</span><span class="p">(</span><span class="n">side</span><span class="p">(</span><span class="n">n</span><span class="p">)))),</span>
+        <span class="n">rot</span><span class="p">(</span><span class="n">corner</span><span class="p">(</span><span class="n">n</span><span class="p">)),</span> 
+        <span class="n">rot</span><span class="p">(</span><span class="n">rot</span><span class="p">(</span><span class="n">side</span><span class="p">(</span><span class="n">n</span><span class="p">))),</span> 
+        <span class="n">rot</span><span class="p">(</span><span class="n">rot</span><span class="p">(</span><span class="n">corner</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">setSize</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">squarelimit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_124_0.png" src="_images/Chap3_Programmare_grafici_124_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">squarelimit</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_125_0.png" src="_images/Chap3_Programmare_grafici_125_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">squarelimit</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_126_0.png" src="_images/Chap3_Programmare_grafici_126_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="approfondimenti">
+<h2>Approfondimenti<a class="headerlink" href="#approfondimenti" title="Permalink to this headline">#</a></h2>
+<p>Gli studenti interessati, possono approfondire gli argomenti introdotti in questa lezione, leggendo un articolo di <a class="reference external" href="https://eprints.soton.ac.uk/257577/1/funcgeo2.pdf">Functional Geometry</a> e provare ad individuare connessioni con argomenti affrontati in altri corsi.</p>
+</div>
+<div class="section" id="frattali">
+<h2>3.3 Frattali<a class="headerlink" href="#frattali" title="Permalink to this headline">#</a></h2>
+<p><strong>NOTA:</strong> Da fare nelle prossime lezioni</p>
+</div>
+<div class="section" id="esercizi">
+<h2>3.4 Esercizi<a class="headerlink" href="#esercizi" title="Permalink to this headline">#</a></h2>
+<div class="section" id="plot-della-funzione-tangente">
+<h3>3.4.1 Plot della funzione tangente<a class="headerlink" href="#plot-della-funzione-tangente" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="plot-di-immagini-ricorsive">
+<h3>3.4.2 Plot di immagini ricorsive<a class="headerlink" href="#plot-di-immagini-ricorsive" title="Permalink to this headline">#</a></h3>
+<p>In questo paragrafo, vengono proposti esercizi che hanno l’obiettivo di far utilizzare gli elementi di programmazione visti per produrre il <em>woodcut</em> di Escher, ma soprattutto di stimolare la vostra curiosità e fantasia.</p>
+<p>Per prima cosa dovete importare la libreria <code class="docutils literal notranslate"><span class="pre">tiles</span></code>, con il comando seguente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tiles</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se volete vedere i comandi della libreria che avete importato potete usare il comando <code class="docutils literal notranslate"><span class="pre">who</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">who</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ARC	 Chess	 D	 EDGE	 EndpointArc	 Eye	 F	 Irish	 Quadrato	 
+Spiral	 Squares	 TQ	 TR	 Tile	 Y	 above	 axvline	 beside	 
+blank	 corner	 edge	 f	 fish	 flip	 fr	 legend	 linspace	 
+nonet	 over	 parse	 parse_path	 pi	 plot	 q2	 qf	 quartet	 
+rectric	 rot	 rot45	 rotOrario	 saveTile	 setSize	 show	 side	 sin	 
+smallfish	 squarelimit	 t	 triangle	 u	 xlabel	 xscale	 ylabel	 yscale	 
+</pre></div>
+</div>
+</div>
+</div>
+<p>La libreria vi mette a disposizione:</p>
+<ol class="simple">
+<li><p>Le funzioni già viste: <code class="docutils literal notranslate"><span class="pre">above,</span> <span class="pre">beside,</span> <span class="pre">flip,</span> <span class="pre">nonet,</span> <span class="pre">over,</span> <span class="pre">rot,</span> <span class="pre">rot45</span></code></p></li>
+<li><p>Delle stringhe che possono essere usate per definire dei nuovi tile: <code class="docutils literal notranslate"><span class="pre">TQ,</span> <span class="pre">TR,</span> <span class="pre">ARC,</span> <span class="pre">EDGE</span></code></p></li>
+<li><p>Delle funzioni ricorsive che producono semplici immagini ricorsive: <code class="docutils literal notranslate"><span class="pre">Chess,</span> <span class="pre">Eye,</span> <span class="pre">Irish,</span> <span class="pre">Spiral</span></code></p></li>
+<li><p>Alcuni comandi nuovi: <code class="docutils literal notranslate"><span class="pre">parse,</span> <span class="pre">saveTile,</span> <span class="pre">setSize</span></code></p></li>
+</ol>
+<p><strong>Definizione di nuovi tiles</strong></p>
+<p>Utilizzando il comando <code class="docutils literal notranslate"><span class="pre">parse(&lt;stringa&gt;)</span></code> è possibile definire dei nuovi tile.</p>
+<p>Considerate la stringa seguente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TR</span> <span class="o">=</span> <span class="s2">&quot;M 0,1         L 1,1         L 0,0         L 0,1&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Questa stringa rappresenta una sequenza di comandi che una “penna meccanica” dovrebbe seguire per disegnare un tile.
+La stringa contiene due tipi di lettere: <strong>M e L</strong>:</p>
+<ul class="simple">
+<li><p>La lettera <strong>M</strong> indica il comando “<em>move to position x,y</em>”</p></li>
+<li><p>La lettera <strong>L</strong> indica il comando “<em>draw a line till position x,y</em>”</p></li>
+</ul>
+<p>Si noti che la posizione (0,0) è in alto a sinistra, e la posizione (1,1) è invece in basso a destra.</p>
+<p>Se passiamo questa stringa in input alla funzione <code class="docutils literal notranslate"><span class="pre">parse</span></code>, otteniamo in output quanto segue:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">parse</span><span class="p">(</span><span class="n">TR</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_140_0.png" src="_images/Chap3_Programmare_grafici_140_0.png" />
+</div>
+</div>
+<p>La funzione <code class="docutils literal notranslate"><span class="pre">setSize(n)</span></code> della libreria <code class="docutils literal notranslate"><span class="pre">tiles.py</span></code> serve per dare una dimensione al quadrato unitario in cui vengono disegnate le vostre tile. Esempio&gt;</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">setSize</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">parse</span><span class="p">(</span><span class="n">TR</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_142_0.png" src="_images/Chap3_Programmare_grafici_142_0.png" />
+</div>
+</div>
+<p>La funzione <code class="docutils literal notranslate"><span class="pre">parse</span></code> ha in realtà altri tre variabili di input che servono per indicare se si vuole una figura colorata, che colore usare per il bordo e che colore usare per la parte interna:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">parse</span><span class="p">(</span><span class="n">TR</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">faceColor</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">edgeColor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_144_0.png" src="_images/Chap3_Programmare_grafici_144_0.png" />
+</div>
+</div>
+<p>Per definire un quadrato nero, si può usare la stringa <strong>TQ</strong> della libreria tiles nel modo seguente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">parse</span><span class="p">(</span><span class="n">TQ</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">faceColor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">edgeColor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_146_0.png" src="_images/Chap3_Programmare_grafici_146_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">parse</span><span class="p">(</span><span class="n">TQ</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">faceColor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">edgeColor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">w</span> <span class="o">=</span> <span class="n">parse</span><span class="p">(</span><span class="n">TQ</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">faceColor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">edgeColor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">quartet</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quartet</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">a</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_149_0.png" src="_images/Chap3_Programmare_grafici_149_0.png" />
+</div>
+</div>
+<p><strong>ESERCIZIO 1: La scacchiera</strong></p>
+<p>Definite un tile <em>blank</em> e uno <em>black</em>, e a partire da questi due tile, utilizzando la funzione <code class="docutils literal notranslate"><span class="pre">quartet</span></code> in modo ricorsivo, scrivere una funzione che produca una scacchiera 8x8.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DA SVOLGERE</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>ESERCIZIO 2: Quadrati psichedelici</strong></p>
+<p>Definite quadrati colorati, e utilizzando la funzione <code class="docutils literal notranslate"><span class="pre">quartet</span></code> in modo ricorsivo, scrivere una funzione che produca una sequenza di quadrati <em>psichedelici</em> simile all’immagine seguente:</p>
+<p><img alt="Psichedelici" src="_images/squares.png" /></p>
+<p><strong>ESERCZIO 3: Irish fantasy</strong>
+Utilizzando le diverse funzioni della libreria tiles, scrivere una funzione ricorsiva che produca un tile simile all’immagine seguente:</p>
+<p><img alt="Irish" src="_images/irish.png" /></p>
+<p>Potete utilizzare i due tile seguenti:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span> <span class="o">=</span> <span class="n">parse</span><span class="p">(</span><span class="n">EDGE</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">edgeColor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">faceColor</span><span class="o">=</span><span class="s1">&#39;darkgreen&#39;</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">parse</span><span class="p">(</span><span class="n">EDGE</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">edgeColor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">faceColor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_155_0.png" src="_images/Chap3_Programmare_grafici_155_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chap3_Programmare_grafici_156_0.png" src="_images/Chap3_Programmare_grafici_156_0.png" />
+</div>
+</div>
+<p><strong>CHALLENGE: Miglior Immagine Ricorsiva</strong></p>
+<p>Usate la vostra fantasia per creare un’immagine ricorsiva: BUON DIVERTIMENTO!</p>
+<p><em>NOTA:</em> Le migliore immagini saranno inserite in questo libro.</p>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

@@ -391,6 +391,38 @@ title="Print to PDF"
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#procedure-funzioni-e-processi-di-calcolo">
+   2.2 Procedure, funzioni e processi di calcolo
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ricorsione-lineare-e-iterazione-lineare">
+     2.2.1 Ricorsione lineare e iterazione lineare
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importante">
+     IMPORTANTE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ricorsione-ad-albero">
+     2.2.2 Ricorsione ad albero
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calcolo-di-elevamento-a-potenza">
+     2.2.3 Calcolo di elevamento a potenza
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#massimo-comun-divisore">
+     2.2.4 Massimo Comun Divisore
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -438,6 +470,38 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#confronto-tra-le-tre-funzioni-trovate">
      2.1.5 Confronto tra le tre funzioni trovate
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#procedure-funzioni-e-processi-di-calcolo">
+   2.2 Procedure, funzioni e processi di calcolo
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ricorsione-lineare-e-iterazione-lineare">
+     2.2.1 Ricorsione lineare e iterazione lineare
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importante">
+     IMPORTANTE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ricorsione-ad-albero">
+     2.2.2 Ricorsione ad albero
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calcolo-di-elevamento-a-potenza">
+     2.2.3 Calcolo di elevamento a potenza
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#massimo-comun-divisore">
+     2.2.4 Massimo Comun Divisore
     </a>
    </li>
   </ul>
@@ -797,6 +861,220 @@ radice di 2.5 nan
 <li><p>Metodo di Bisezione</p></li>
 <li><p>Metodo di Newton</p></li>
 </ol>
+</div>
+</div>
+<div class="section" id="procedure-funzioni-e-processi-di-calcolo">
+<h2>2.2 Procedure, funzioni e processi di calcolo<a class="headerlink" href="#procedure-funzioni-e-processi-di-calcolo" title="Permalink to this headline">#</a></h2>
+<p>Una procedura definisce uno “schema” di evoluzione <em>locale</em> di un processo computazionale. La procedura specifica in ogni fase del processo, come il processo stesso viene eseguito a partire dalla fase precedente. È interessante studiare il comportamento <em>globale</em> di un processo la cui evoluzione locale è stata specificata da una procedura. In generale, andare a studiare questo comportamento è molto complicato, ma in alcuni casi semplici si possono identificare degli schemi ricorrenti (in inglese <strong>pattern</strong>).</p>
+<p>Proviamo ora a studiare la “forma” che prendono alcuni processi generati da procedure molto semplici. Studieremo anche velocemente la velocità con cui questi processi consumano le due risorse di calcolo fondamentali:</p>
+<ol class="simple">
+<li><p>IL TEMPO</p></li>
+<li><p>LA MEMORIA</p></li>
+</ol>
+<p>Come nelle lezioni precedenti, le procedure che consideriamo sono semplici. Il loro ruolo è lo stesso ricoperto dai <em>test patterns</em> in <a class="reference external" href="http://www.bealecorner.org/red/test-patterns/">fotografia</a>: uno schema prototipale ipersemplificato, piuttosto che un caso d’uso reale.</p>
+<div class="section" id="ricorsione-lineare-e-iterazione-lineare">
+<h3>2.2.1 Ricorsione lineare e iterazione lineare<a class="headerlink" href="#ricorsione-lineare-e-iterazione-lineare" title="Permalink to this headline">#</a></h3>
+<p>Si consideri la funzione fattoriale definita come segue: si definisce il <em>fattoriale</em> di un numero naturale <span class="math notranslate nohighlight">\(n\)</span>, indicato con <span class="math notranslate nohighlight">\(n!\)</span>, il prodotto dei numeri naturali uguali o minori a <span class="math notranslate nohighlight">\(n\)</span>, ovvero:</p>
+<div class="math notranslate nohighlight">
+\[n! = \prod_{k=1}^n k = 1 \cdot 2 \cdot 3 \cdot \cdot \cdot (n-2) \cdot (n-1) \cdot n\]</div>
+<p>Esistono molti modi di calcolare il fattoriale di un numero naturale. Un modo è di osservare che <span class="math notranslate nohighlight">\(n!\)</span> è uguale ad <span class="math notranslate nohighlight">\(n\)</span> volte <span class="math notranslate nohighlight">\((n-1)!\)</span> per qualsiasi intero <span class="math notranslate nohighlight">\(n\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ n! = n \cdot [(n-1)\cdot(n-2)\cdots 3 \cdot 2 \cdot 1] = n \cdot (n-1)!\]</div>
+<p>In questo modo possiamo calcolare <span class="math notranslate nohighlight">\(n!\)</span> calcolando <strong>prima</strong> <span class="math notranslate nohighlight">\((n-1)!\)</span> e moltiplicando <strong>poi</strong> il risultato per <span class="math notranslate nohighlight">\(n\)</span>. Se aggiungiamo la definizione che <span class="math notranslate nohighlight">\(1!\)</span> è uguale a 1, possiamo definire la procedura seguente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Fact</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span><span class="o">*</span><span class="n">Fact</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">Fact</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>120
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se usiamo il <em>substitution model</em> per valutare la procedure per <span class="math notranslate nohighlight">\(5!\)</span>, otteniamo lo schema seguente:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fattoriale</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="mi">5</span> <span class="o">*</span> <span class="n">Fattoriale</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">Fattoriale</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">Fattoriale</span><span class="p">(</span><span class="mi">2</span><span class="p">)))</span>
+<span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">Fattoriale</span><span class="p">(</span><span class="mi">1</span><span class="p">))))</span>
+<span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">1</span><span class="p">)))</span>
+<span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="mi">2</span><span class="p">))</span> 
+<span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="mi">6</span><span class="p">)</span> 
+<span class="mi">5</span> <span class="o">*</span> <span class="mi">24</span>
+<span class="mi">120</span>
+</pre></div>
+</div>
+<p>Ora, questa procedura è corretta, in quanto produce il risultato richiesto (si può dimostrare formalmente la correttezza, ma non è lo scopo di questa capitolo).</p>
+<p>Possiamo tuttavia calcolare il fattoriale di un numero usando un approccio diverso. Potremmo descrivere una regola per calcolare il fattoriale di un numero naturale <span class="math notranslate nohighlight">\(n\)</span> specificando che prima moltiplichiamo 1 per 2, poi moltiplichiamo il risultato per 3, poi il risultato per 4, e cosi via, sino a raggiungere il valore di <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<p>Più formalmente, manteniamo una variabile per il prodotto corrente (chiamata in gergo un <strong>accumulator</strong>), insieme a una variabile che “tiene il conto” da 1 a <span class="math notranslate nohighlight">\(n\)</span> (un <strong>counter</strong>). Possiamo descrivere il processo di calcolo dicendo che l’accumulator e il counter aggiornano il loro stato “contemporaneamente” ad ogni fase del processo di calcolo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">accumulator</span> <span class="o">&lt;-</span> <span class="n">counter</span> <span class="o">*</span> <span class="n">accumulator</span>
+<span class="n">counter</span> <span class="o">&lt;-</span> <span class="n">counter</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Chiaramente, sia l’accumulator che il counter sono inizializzati a 1.</p>
+<p>Data questa regola per calcolare <span class="math notranslate nohighlight">\(n!\)</span>, possiamo scrivere le due procedure seguenti:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">FactI</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">R</span><span class="p">(</span><span class="n">acc</span><span class="p">,</span> <span class="n">count</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="n">acc</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">count</span> <span class="o">==</span> <span class="n">x</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">acc</span><span class="o">*</span><span class="n">x</span>
+        <span class="k">return</span> <span class="n">R</span><span class="p">(</span><span class="n">acc</span> <span class="o">*</span> <span class="n">count</span><span class="p">,</span> <span class="n">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Fact&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">R</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">FactI</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fact 5
+R 1 1
+R 1 2
+R 2 3
+R 6 4
+R 24 5
+120
+</pre></div>
+</div>
+</div>
+</div>
+<p>Come prima, se usiamo il <em>substitution model</em> possiamo visualizzare il processo di calcolare <span class="math notranslate nohighlight">\(5!\)</span> usando la procedura <code class="docutils literal notranslate"><span class="pre">FactorialI</span></code>, come segue:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FactorialI</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">Rec</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">Rec</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">Rec</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">Rec</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">Rec</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">Rec</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="mi">120</span>
+</pre></div>
+</div>
+<p>Si provi a confrontare questo schema di calcolo rispetto al precedente.</p>
+<p>A prima vista non sembrano troppo diversi: entrambi calcolano <span class="math notranslate nohighlight">\(5!\)</span>. Entrambe le procedure richiedono un numero di passi proporzionale al numero <span class="math notranslate nohighlight">\(n\)</span>. Entrambe le procedure eseguono la stessa sequenza di prodotti, ottenendo gli stessi prodotti parziali. Tuttavia, visualizzando l’evoluzione del processo di calcolo, otteniamo chiaramente una “forma” (uno schema, un <em>pattern</em>) diversa per i due processi.</p>
+<p>Si consideri il primo processo. Procedendo con il modello sostitutivo, otteniamo prima una sequenza di espansioni, seguita da una sequenza di contrazioni. Le espansioni si ottengono mentre il processo costruisce una sequenza di operazioni <strong>deferred</strong> (in questo caso la sequenza di moltiplicazioni). Le contrazioni avvengono quando le operazioni <strong>deferred</strong> sono effettivamente calcolate.</p>
+<p>Questo tipo di processo, caratterizzato da una sequenza di operazioni deffered, viene chiamato <strong>PROCESSO RICORSIVO</strong>.</p>
+<p>Questo processo richiede che l’interprete tenga memoria delle operazioni che deve eseguire dopo, durante la sequenza di contrazioni. Nel caso del calcolo di <span class="math notranslate nohighlight">\(n!\)</span>, la lunghezza della sequenza di operazioni deferred, e quindi la quantità di informazioni da mantenere in memoria, è lineare nell’input <span class="math notranslate nohighlight">\(n\)</span>. Si parla quindi di <strong>PROCESSO RICORSIVO LINEARE</strong>.</p>
+<p>Al contrario, il secondo processo, quello della procedura <code class="docutils literal notranslate"><span class="pre">FactorialI(n)</span></code> non si espande e non si contrae. Ad ogni passo, gli unici valori di cui dobbiamo tener traccia sono le tre variabili <code class="docutils literal notranslate"><span class="pre">accumulator</span></code>, <code class="docutils literal notranslate"><span class="pre">counter</span></code>, e <code class="docutils literal notranslate"><span class="pre">n</span></code>. Questo viene chiamato un <strong>PROCESSO ITERATIVO</strong>. In generale, un processo iterativo può essere descritto da un numero finito di <em>variabili di stato</em>, insieme con una regola che descrive come le variabili di stato dovrebbero essere aggiornate quando il processo passo da uno stato al successivo, e dovrebbe avere un test d’arresto (i.e., una espressione condizionale <code class="docutils literal notranslate"><span class="pre">if</span></code>) che specifica sotto quali condizioni il processo dovrebbe terminare. Nel calcolare <span class="math notranslate nohighlight">\(n!\)</span> il numero di passo richiesto cresce linearmente con <span class="math notranslate nohighlight">\(n\)</span>. Tale processo viene chiamato un <strong>PROCESSO ITERATIVO LINEARE</strong> (in inglese vengono chiamate funzioni <strong>tail-recursive</strong>).</p>
+</div>
+<div class="section" id="importante">
+<h3>IMPORTANTE<a class="headerlink" href="#importante" title="Permalink to this headline">#</a></h3>
+<p>Nel confrontare i due tipi di processi, si deve fare attenzione a non confondere il concetto di <em>processo ricorsivo</em> con quello di <em>procedura e/o funzione ricorsiva</em>.</p>
+<p>Quando descriviamo una procedura come ricorsiva, ci stiamo riferendo al fatto di definire una funzione che richiama se stessa.</p>
+<p>Tuttavia, quando descriviamo un processo che segue uno schema linearmente ricorsivo, stiamo parlando di come il processo evolve, non della sintassi che viene usata per scrivere la procedura. Può creare confusione il dire che una procedura ricorsiva, come ad esempio <code class="docutils literal notranslate"><span class="pre">FactorialI(n)</span></code>, genera un processo iterativo. In ogni caso il processo è iterativo: il suo stato è descritto completamente dalle sue tre variabili di stato, e l’interprete deve tener traccia solo di quelle tre variabili per poter eseguire il processo.</p>
+<p>Il motivo principale che genera questa confusione, è che l’implementazione attuale di molti di linguaggi di programmazione comuni (C, Java, e lo stesso Python) sono implementati in modo tale che l’esecuzione di ogni chiamata ricorsiva consuma una quantità di memoria che cresce linearmente con il numero di chiamate ricorsive alla stessa procedura, anche se il processo stesso è iterativo.
+L’implementazione di altri linguaggi di programmazione (per esempio, il LISP e Haskell) è in grado di distinguere i processi ricorsivi e i processi iterativi, che risultano in grado di ottimizzare il processo di calcolo usando una quantità di memoria che dipende solo dal numero di variabili di stato.</p>
+</div>
+<div class="section" id="ricorsione-ad-albero">
+<h3>2.2.2 Ricorsione ad albero<a class="headerlink" href="#ricorsione-ad-albero" title="Permalink to this headline">#</a></h3>
+<p>Un altro schema ricorrente di calcolo è la ricorsione ad albero. Si consideri per esempio la successione dei numeri di Fibonacci, in cui ogni numero è la somma dei due numeri precedenti:</p>
+<div class="math notranslate nohighlight">
+\[0, 1, 1, 2, 3, 5, 8, 13, 21, ...\]</div>
+<p><img alt="Mole Antonelliana" src="_images/mole.jpg" /></p>
+<p>In generale, l’ennessimo numero di Fibonacci può essere definito dalla regola seguente:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}Fib(n) = \left\{ \begin{array}{ll} 
+0 &amp; \mbox{if } n = 0 \\  
+1 &amp; \mbox{if } n = 1  \\
+Fib(n-1) + Fib(n-2) &amp; \mbox{altrimenti} \end{array} \right.\end{split}\]</div>
+<p><strong>ESERCIZIO</strong>: Tradurre questa definizione in una procedura ricorsiva per calcolare l’ennesimo numero di Fibonacci.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">Fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">Fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Fib</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<p>Si consideri lo schema di calcolo di tale funzione (FARE ALLA LAVAGNA). Si noti che il processo stesso evolve come un albero: ad ogni nodo il processo di ramifica in due sottoprocessi, tranne che ai nodi foglia. Questo è dovuto al fatto che la procedura chiama se stessa due volte per ogni invocazione.</p>
+<p>Questa procedura per calcolare i numeri di Fibonacci è un ottimo esempio di struttura ad albero, ma è un pessimo modo di calcolare i numeri di Fibonacci. Per rendersi conto di quanto sia inefficiente, si consideri che questo processo usa un numero di passi che cresce esponenzialmente con l’input. Tuttavia, lo spazio richiesto cresce solo linearmente con l’input, in quanto dobbiamo tener traccia dei nodi al di sotto del nodo corrente a qualsiasi momento del processo.
+In generale, il numero di passi richiesto da un processo ricorsivo ad albero sarà proporzionale al numero di nodi dell’albero, mentre lo spazio richiesto sarà proporzionale alla profondità massima dell’albero.</p>
+<p>Il calcolo dei numeri di Fibonacci può essere formulato anche come un processo iterativo. L’idea è di usare una coppia di numeri <span class="math notranslate nohighlight">\(a\)</span> e <span class="math notranslate nohighlight">\(b\)</span>, inizializzati con <span class="math notranslate nohighlight">\(Fib(1)=1\)</span> e <span class="math notranslate nohighlight">\(Fib(0)=0\)</span>, e di applicare ripetutamente le <strong>trasformazioni simultanee</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">&lt;-</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="n">b</span> <span class="o">&lt;-</span> <span class="n">a</span>
+</pre></div>
+</div>
+<p>Non dovrebbe essere complicato realizzare che dopo aver applicato queste trasformazioni <span class="math notranslate nohighlight">\(n\)</span> volte, <span class="math notranslate nohighlight">\(a\)</span> e <span class="math notranslate nohighlight">\(b\)</span> avranno i valori <span class="math notranslate nohighlight">\(Fib(n+1)\)</span> e <span class="math notranslate nohighlight">\(Fib(n)\)</span>.</p>
+<p><strong>ESERCIZIO</strong>: Scrivere una procedura che calcoli i numeri di Fibonacci usando un processo iterativo.</p>
+</div>
+<div class="section" id="calcolo-di-elevamento-a-potenza">
+<h3>2.2.3 Calcolo di elevamento a potenza<a class="headerlink" href="#calcolo-di-elevamento-a-potenza" title="Permalink to this headline">#</a></h3>
+<p>Si consideri il problema di calcolare l’esponenziale di un numero dato. Vorremo avere una procedura che prende come argomenti la base <span class="math notranslate nohighlight">\(b\)</span> e un intero positivo <span class="math notranslate nohighlight">\(n\)</span>, e calcola il valore <span class="math notranslate nohighlight">\(b^n\)</span>. Un modo possibile di procedere è utilizzando la definizione ricorsiva:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{ll}b^n = b \cdot b^{n-1}\\
+b^0 = 1\end{array}\end{split}\]</div>
+<p><strong>ESERCIZIO</strong>: Scrivere una procedura che applichi direttamente la definizione precedente, tramite un processo ricorsivo lineare.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># COMPLETARE</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>ESERCIZIO</strong>: Scrivere una procedura che esegue l’elevamento a potenza usando un processo iterativo lineare.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># COMPLETARE</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="massimo-comun-divisore">
+<h3>2.2.4 Massimo Comun Divisore<a class="headerlink" href="#massimo-comun-divisore" title="Permalink to this headline">#</a></h3>
+<p>Il Massimo Comun Divisore (MCD) di due numeri intero <span class="math notranslate nohighlight">\(a\)</span> e <span class="math notranslate nohighlight">\(b\)</span> è definito come il più grande numero intero che divide sia <span class="math notranslate nohighlight">\(a\)</span> che <span class="math notranslate nohighlight">\(b\)</span> senza resto. Per esempio, il massimo comun divisore di 16 e 28 è il numero 4. Esiste un metodo famoso per calcolare tale numero: l’<strong>algoritmo di Euclide</strong>.</p>
+<p>L’idea dell’algoritmo si basa sull’osservazione che, se <span class="math notranslate nohighlight">\(r\)</span> è il resto di quando <span class="math notranslate nohighlight">\(a\)</span> è diviso per <span class="math notranslate nohighlight">\(b\)</span>, allora i divisori comuni di <span class="math notranslate nohighlight">\(a\)</span> e <span class="math notranslate nohighlight">\(b\)</span> sono esattamente esattamente gli stessi divisori comuni tra <span class="math notranslate nohighlight">\(b\)</span> e <span class="math notranslate nohighlight">\(r\)</span>. Quindi possiamo usare l’equazione:</p>
+<div class="math notranslate nohighlight">
+\[MCD(a,b) = MCD(n,r)\]</div>
+<p>per ridurre il problema di trovare i divisori comuni calcolando il MCD tra coppie di numeri interi via via più piccoli. Per esempio:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MCD</span><span class="p">(</span><span class="mi">206</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">=</span> <span class="n">MCD</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+            <span class="o">=</span> <span class="n">MCD</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+            <span class="o">=</span> <span class="n">MCD</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+            <span class="o">=</span> <span class="n">MCD</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+            <span class="o">=</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p><strong>ESERCIZIO</strong>: Scrivere una procedura che calcola il massimo comun divisore usando l’algoritmo di Euclide (per calcolare il resto di una divisione tra due numeri interi si usa l’operatore modulo <code class="docutils literal notranslate"><span class="pre">%</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># COMPLETARE</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>NOTA:</strong> Per le soluzioni degli esercizi, consultare il sito del corso.</p>
 </div>
 </div>
 </div>
