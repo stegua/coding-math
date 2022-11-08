@@ -5,7 +5,7 @@ Il libro raccoglie e organizza gli appunti usati per le lezione del corso di **P
 
 Il libro è reso disponibile come [jupyter-book](https://jupyterbook.org/) al sito seguente:
 
-*. [coding-math](https://stegua.github.io/coding-math)
+* [coding-math](https://stegua.github.io/coding-math)
 
 Si noti che ogni capitolo del libro può essere aperto direttamente in Binder or in un Google Colab.
 
