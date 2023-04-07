@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/543490981.svg)](https://zenodo.org/badge/latestdoi/543490981)
+
 # Coding Math
 
 Questo sito ospite il codice sorgente per un libro di introduzione alla programmazione per studenti di matematica. 
